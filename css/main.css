@@ -311,10 +311,8 @@ footer {
   letter-spacing: 2px;
 }
 
-.works_content img{
-  width: 30%;
-  height: 30%;
-}
+/*.works_content img{*/
+/*}*/
  
 .content{
     margin: 0 auto;
@@ -340,6 +338,11 @@ footer {
     width: 100%;
 }
 
+.url , .github{
+  margin: 10px;
+  font-size: 20px;
+}
+
 .modal-content{
     background: #fff;
     left: 50%;
@@ -351,6 +354,7 @@ footer {
 }
 
 .thumbnails {
+  margin-top: 5px;
   background-color: #c0c0c0;
 }
 

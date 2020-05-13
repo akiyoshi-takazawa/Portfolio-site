@@ -181,11 +181,12 @@
 <!-- ここからWorksコンテンツ -->
     <section id="works" class="works">
         <h2 class="works__title animated">Works</h2>
-        <div class="workks__content animated">
-            <div class="">
-                    <img class="js-modal-open img-fluid rounded " data-target="modal01"  src="img/works/portfoliosite_top.png"  alt="AKiyoshi">
-                    <!--<img class="js-modal-open img-fluid rounded col-md-4" data-target="modal02" src="img/works/テストイメージ.png" width="500" height="500" alt="AKiyoshi"></a>-->
-                    <!--<img class="js-modal-open img-fluid rounded col-md-4" data-target="modal01" src="img/works/テストイメージ.png" width="500" height="500" alt="AKiyoshi"></a>-->
+        <div class="works_content animated">
+            <div class="container">
+                <div class="row">
+                    <img class="js-modal-open img-fluid rounded col-6" data-target="modal01"  src="img/works/portfoliosite_top.png"  alt="AKiyoshi">
+                    <img class="js-modal-open img-fluid rounded col-6" data-target="modal02" src="img/works/kosu_mac_top.png" alt="kosu"></a>
+                </div>
             </div>
         </div>
                 <!-- ここからモーダルウィンドウ表示 -->
@@ -200,17 +201,17 @@
                         ターゲット：転職先の人事の方や、サイトを見ていただけるエンジニアの方向け<br>
                         コンセプト：シンプルイズザマイベスト(目的に沿って、デザインをシンプル、かつ自分の考え方や自分の内容を多くしました。)</p>
                         <h5 class="center-align"><span>使用言語・環境など</span></h5>
-                        <p>HTML/CSS, jQuery, chat.js, php, GitGitHub, AWS,</p>
+                        <p>HTML/CSS, jQuery, chat.js, php, GitGitHub, AWS(EC2), Heroku</p>
                     </div>
                     <div class="col s12 m8">
                             <!-- ここからサムネイル画像-->
                             <div class="thumbnails">
-                                <img src="img/works/modal/portfoliosite_top.png" width="150px" height="100px"alt="top">
-                                <img src="img/works/modal/portfoliosite_aboutme.png" width="150px" height="100px" alt="aboutme">
-                                <img src="img/works/modal/portfoliosite_works.png" width="150px" height="100px" alt="works">
-                                <img src="img/works/modal/portfoliosite_skills.png" width="150px" height="100px" alt="skills">
-                                <img src="img/works/modal/portfoliosite_profile.png" width="150px" height="100px" alt="profile">
-                                <img src="img/works/modal/portfoliosite_instagram.png" width="150px" height="100px" alt="instagram">
+                                <img src="img/works/modal/portfolio/portfoliosite_top.png" width="150px" height="100px" alt="top">
+                                <img src="img/works/modal/portfolio/portfoliosite_aboutme.png" width="150px" height="100px" alt="aboutme">
+                                <img src="img/works/modal/portfolio/portfoliosite_works.png" width="150px" height="100px" alt="works">
+                                <img src="img/works/modal/portfolio/portfoliosite_skills.png" width="150px" height="100px" alt="skills">
+                                <img src="img/works/modal/portfolio/portfoliosite_profile.png" width="150px" height="100px" alt="profile">
+                                <img src="img/works/modal/portfolio/portfoliosite_instagram.png" width="150px" height="100px" alt="instagram">
                             </div>
                             <!-- ここにクリックすると画像が代わるギミックを入れる　-->
                     </div>
@@ -220,31 +221,42 @@
             </div>
                     
                 <!-- モーダルウィンドウ　2  -->
-            <!--<div id="modal02" class="modal js-modal">-->
-            <!--    <div class="modal__bg js-modal-close"></div>-->
-            <!--    <div class="modal-content">-->
-            <!--        <div class="col s12 m4">-->
-            <!--            <h4 class="center-align"><span>テスト2</span></h4>-->
-            <!--            <p>今見ていただいているWebページです。テストテストテストテストテストテストテストテスト-->
-            <!--            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト-->
-            <!--            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>-->
-            <!--            <h5 class="center-align"><span>使用言語・環境など</span></h5>-->
-            <!--            <p>HTML/CSS, jQuery, Git, AWS</p>-->
-            <!--        </div>-->
-            <!--        <div class="col s12 m8">-->
-                        <!-- ここからサムネイル画像-->
-            <!--            <div class="thumbnails">-->
-            <!--                <img src="img/works/テストイメージ.png" alt="テスト">-->
-            <!--                <img src="img/works/テストイメージ.png" alt="テスト">-->
-            <!--                <img src="img/works/テストイメージ.png" alt="テスト"><br>-->
-            <!--                ここに完成サイトのコンテンツごとの写真がのります-->
-            <!--            </div>-->
-                        <!-- ここにクリックすると画像が代わるギミックを入れる　-->
-            <!--        </div>-->
-                        　<!--　閉じるボタン　-->
-            <!--        <div class="js-modal-close"><button type="button" class="btn btn-info">閉じる</button></div>-->
-            <!--    </div>-->
-            <!--</div>-->
+            <div id="modal02" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal-content">
+                    <div class="col s12 m4">
+                        <h4 class="center-align"><span>Sample management Tool</span></h4>
+                        <p>学習したLaravelを使い、ビジネスシーンでよく使用されている工数管理をイメージし、制作を致しました。<br>
+                        制作目的：学習したLaravwlのアウトプット用<br>
+                        ビジネスにおける案件ごとの工数管理をすることが出来ます。使用する企業イメージは、エンジニアを派遣している企業。<br>
+                        実際の使う場面を考え、ユーザーを『承認者』『従業員』でフラグを立て、ユーザーごとに使用できる機能を制限致しました。<br>
+                        従業員から提出された工数データを承認者が承認や否認、コメントを出来るようにしました。<br>
+                        実際にアウトプットしてみて、チュートリアルとは違い、すべての画面を作ることの大変さやCRUD操作、<br>
+                        基本的なDB抽出方法、デバックの癖付けを学ぶことが出来ました。</p>
+                        <h5 class="center-align"><span>使用言語・環境など</span></h5>
+                        <p>HTML/CSS, jQuery, Laravel, Bootstrap, Git/Gitcommit/GitHub, AWS(EC2), Heroku</p>
+                        <span class="url"><a href="http://costs-management.herokuapp.com/">APP URL</a></span>
+                        <span class="github"><a href="https://github.com/akiyoshi-takazawa/costs_management_tool"><i class="fab fa-github"></i>GitHub</a></span>
+                    </div>
+                    <div class="col s12 m8">
+                        <div class="thumbnails">
+                            <img src="img/works/modal/sampletool/common/kosu_top.png"  width="150px" height="100px" alt="top">
+                            <img src="img/works/modal/sampletool/common/kosu_new.png"  width="150px" height="100px" alt="newregister">
+                            <img src="img/works/modal/sampletool/auth/kosu_week.png"  width="150px" height="100px" alt="week">
+                            <img src="img/works/modal/sampletool/auth/kosu_proposition_reg.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/auth/kosu_proposition.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/auth/kosu_user.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/auth/kosu_syosai.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/auth/kosu_report.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/auth/kosu_goke.png"  width="150px" height="100px" alt="auth">
+                            <img src="img/works/modal/sampletool/employee/kosu_employee_report.png"  width="150px" height="100px" alt="employee">
+                            <img src="img/works/modal/sampletool/employee/kosu_employee_top.png"  width="150px" height="100px" alt="employee">
+                        </div>
+                    </div>
+                        　　<!--閉じるボタン　-->
+                    <div class="js-modal-close"><button type="button" class="btn btn-info">閉じる</button></div>
+                </div>
+            </div>
                     
                 <!-- モーダルウィンドウ　3  -->
             <!--<div id="modal03" class="modal js-modal">-->
