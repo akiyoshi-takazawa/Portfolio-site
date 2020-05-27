@@ -6,10 +6,10 @@
             datasets: [{
                 label: 'FrontEnd',
                 data: [2, 2, 2, 2, 2, 2],
-                backgroundColor: 'RGBA(225,95,150, 0.5)',
-                borderColor: 'RGBA(225,95,150, 1)',
+                backgroundColor: 'RGBA(0,123,190,0.5)',
+                borderColor: 'RGBA(0,123,190,0.5)',
                 borderWidth: 1,
-                pointBackgroundColor: 'RGB(255,0,0)'
+                pointBackgroundColor: 'RGBA(0,112,192,0.8)'
             }, ],
         },
         options: {
@@ -35,10 +35,10 @@
             datasets: [{
                 label: 'BackEnd / DevOps',
                 data: [2, 2, 2, 2, 2, 2],
-                backgroundColor: 'RGBA(115,255,25, 0.5)',
-                borderColor: 'RGBA(115,255,25, 1)',
+                backgroundColor: 'RGBA(143,170,220, 0.5)',
+                borderColor: 'RGBA(143,170,220, 0.5)',
                 borderWidth: 1,
-                pointBackgroundColor: 'RGB(0,128,0)'
+                pointBackgroundColor: 'RGBA(96,135,206,0.8)'
             }, ],
         },
         options: {

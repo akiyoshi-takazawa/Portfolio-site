@@ -160,7 +160,7 @@ footer {
     animation-duration: 11s;
 }
 
-.top a{
+.top a .logo{
   width: 30px;
   margin: 0;
   padding: 0;
