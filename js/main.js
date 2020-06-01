@@ -15,19 +15,22 @@ const showTab = (tabName) => {
     return;
   }
 
-  const tabsContainer = $(`a[href='#${tabName}']`).closest('.tabs');
-  // .tabs__menu liのうちtabNameに該当するものにだけactiveクラスを付ける
-  tabsContainer.find('.tabs__menu li').removeClass('active');
+  const tabsContainer = $(`a[href='#${tabName}']`).closest('.content');
+  // .thumbnails liのうちtabNameに該当するものにだけactiveクラスを付ける
+  // 先にすべてのactiveを取る
+  tabsContainer.find('.thumbnails ul li').removeClass('active');
+  //activeをつける
   tabsContainer
-    .find(`.tabs__menu a[href='#${tabName}']`)
+    .find(`.thumbnails a[href='#${tabName}']`)
     .parent('li')
     .addClass('active');
 
-  // .tabs__contentの直下の要素をすべて非表示
-  tabsContainer.find('.tabs__content > *').css({ display: 'none' });
-  // #<tabName>と.tabs__content .<tabName>を表示
+  // .mainの直下の要素をすべて非表示
+  tabsContainer.find('.main > *').css({ display: 'none' });
+  tabsContainer.find('.descriptions > *').css({ display: 'none' });
+  // #<tabName>と.main .<tabName>を表示
   tabsContainer
-    .find(`#${tabName}, .tabs__content .${tabName}`)
+    .find(`#${tabName}, .main .${tabName}`)
     .css({
       display: 'block',
       opacity: 0.7,
@@ -41,88 +44,9 @@ const showTab = (tabName) => {
 };
 
 
-/**
- * -------------
- * パララックス関連
- * -------------
- */
-
-// 背景画像のスクロール速度。数字が小さいほど速い。
-const parallaxXSpeed = 12;
-const parallaxYSpeed = 3;
-const parallaxXSpeedSmall = 5;
-const parallaxYSpeedSmall = 1;
-
-// パララックスを適用する関数
-const showParallax = () => {
-  const scrollTop = $(window).scrollTop();
-
-  // 背景画像の位置をスクロールに合わせて変える
-  const offsetX = Math.round(scrollTop / parallaxXSpeed);
-  const offsetY = Math.round(scrollTop / parallaxYSpeed);
-  const offsetXSmall = Math.round(scrollTop / parallaxXSpeedSmall);
-  const offsetYSmall = Math.round(scrollTop / parallaxYSpeedSmall);
-
-  $('.aboutme').css({
-    'background-position':
-      // 一番上
-      `${-offsetX}px ${-offsetY}px, ${
-        // 上から2番目
-        offsetXSmall
-      }px ${-offsetYSmall}px, `
-      // 一番下
-      + '0% 0%',
-  });
-};
-
-// パララックスを初期化する関数
-const initParallax = () => {
-  $(window).off('scroll', showParallax);
-
-  if (!isMobile) {
-    // モバイルブラウザでなければパララックスを適用
-    showParallax();
-
-    // スクロールのたびにshowParallax関数を呼ぶ
-    $(window).on('scroll', showParallax);
-  }
-};
-
-
-/**
- * ------------------
- * イベントハンドラの登録
- * ------------------
- */
-
-/**
- * animatedクラスを持つ要素が画面内に入ったら
- * Animate.cssのfadeInUpエフェクトを適用
- */
-$('.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-      this.destroy();
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '100%',
-});
-
-$(window).on('resize', () => {
-  // ウインドウがリサイズされるとここが実行される
-  initParallax();
-});
-
-
 // タブがクリックされたらコンテンツを表示
-$('.tabs__menu a').on('click', (e) => {
+$('.thumbnails ul li a').on('click', (e) => {
   const tabName = $(e.currentTarget).attr('href');
-
   // hrefにページ遷移しない
   e.preventDefault();
 
@@ -133,10 +57,63 @@ $('.tabs__menu a').on('click', (e) => {
 });
 
 
-
-
 // 初期状態として1番目のタブを表示
-showTab('aboutme-1');
+showTab('aboutme_1');
+
+
+// ボタンの表示／非表示を切り替える関数
+const updateButton = () => {
+  if ($(window).scrollTop() >= 450) {
+    // 300px以上スクロールされた
+    // ボタンを表示
+    $('.back-to-top').fadeIn();
+  } else {
+    // ボタンを非表示
+    $('.back-to-top').fadeOut();
+  }
+};
+
+// スクロールされる度にupdateButtonを実行
+$(window).on('scroll', updateButton);
+
+// ボタンをクリックしたらページトップにスクロールする
+$('.back-to-top').on('click', (e) => {
+  // ボタンのhrefに遷移しない
+  e.preventDefault();
+
+  // 600ミリ秒かけてトップに戻る
+  $('html, body').animate({ scrollTop: 0 }, 600);
+});
+
+// ページの途中でリロード（再読み込み）された場合でも、ボタンが表示されるようにする
+updateButton();
+
+
+
+// ハンバーガーメニュー
+$(document).ready(function(){
+  $(".sp_navi").click(function () { 
+    $(".sp_menu").slideToggle();
+  });
+  // ハンバーガーメニューのリンクがクリックされた場合
+  $(".sp_menu a").click(function () { 
+    $(".sp_menu").slideToggle();
+  });
+  
+  //ハンバーガーメニューを開いたまま834px以上にした場合、閉じる
+  $(window).resize(function(){
+    var windowW = $(window).width();//画面の横幅を取得
+    //window幅が変化した際にドロップダウン状態か判定し、イベントを分岐
+    windowW = $(window).width();
+      
+    if(windowW > 834){
+    //834以上ならメニューを閉じる
+      $(".sp_menu").css({display: 'none'});
+    }
+  });
+
+});
+
 
 // パララックスを初期化する
 initParallax();

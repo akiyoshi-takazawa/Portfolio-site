@@ -7,54 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Webフォント -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
 
-    <!-- CSSライブラリ -->
-    <!--<link rel="stylesheet" href="css/main.css">-->
+     <!--CSS -->
+    <link rel="stylesheet" href="css/style.css">
     
     <link rel="icon" type="image/png" href="images/top/logo.png">
 </head>
 
 <body>
     <header>
-        <!--logo-->
-        <div class="logo">
-          <img class="top_logo" src="images/top/logo.png" alt="logo">
-        </div>
-        
-        <!--nav-->
-        <div class="navi">
-            <!--pc nav-->
-            <div class="pc_navi">
-                <ul>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#">ABOUT ME</a></li>
-                    <li><a href="#">WORKS</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">PROFILE</a></li>
-                    <li><a href="#"><img class="pc_navi_li_img" src="images/top/insta.png" alt="instagram"></a></li>
-                 </ul>
+        <div class="navi_form">
+            <div class="coloum"></div>
+            <!--logo-->
+            <div class="logo">
+              <a href="index.html"><img class="top_logo" src="images/top/logo.png" alt="logo"></a>
+            </div>
+            
+            <!--nav-->
+            <div class="navi">
+                <!--pc nav-->
+                <div class="pc_navi">
+                    <ul>
+                        <li><a href="#TOP">TOP</a></li>
+                        <li><a href="#aboutme">ABOUT ME</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#profile">PROFILE</a></li>
+                        <li><a href="https://www.instagram.com/takazawa_akiyoshi/?hl=ja" target="_blank" rel="noopener"><img class="pc_navi_li_img" src="images/top/insta.png" alt="instagram"></a></li>
+                     </ul>
+                </div>
+                <div class="sp_navi">
+                    <img src="images/top/sp_navi.png" alt="navi">
+                </div>
+                <div class="sp_menu">
+                    <ul>
+                        <li><a href="#TOP">TOP</a></li>
+                        <li><a href="#aboutme">ABOUT ME</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#profile">PROFILE</a></li>
+                        <li><a href="https://www.instagram.com/takazawa_akiyoshi/?hl=ja" target="_blank" rel="noopener">INSTAGRAM<img class="pc_navi_li_img" src="images/top/insta.png" alt="instagram"></a></li>
+                     </ul>
+                </div>
             </div>
         </div>
-        
         
     </header>
     <main>
         <!-- page top -->
         <div class="top">
             <!--title-->
-            <div class="title">
-                <h1>Akiyoshi</h1>
-                <h1>Takazawa</h1>
-                <div class="subtitle">ポートフォリオサイトへようこそ</div>
+            <div class="title_mark">
+                <div class="title">
+                    <h1>Akiyoshi</h1>
+                    <h1>Takazawa</h1>
+                    <div class="subtitle">ポートフォリオサイトへようこそ</div>
+                </div>
+                <div class="mark">
+                    <img src="images/top/mark.png" alt="mark">
+                </div>
             </div>
             
             <!-- squere animation -->
             <div class="squere">
                 <ul class="circles">
+                    <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -74,8 +96,17 @@
             
             <!-- ABOUT ME-->
             <section id="aboutme" class="aboutme">
-                <h2><span>ABOUT</span><span>ME</span></h2>
-                <div class="content">
+                <div class="background">
+                <h2><span>A</span>BOUT<span> M</span>E</h2>
+                <div class="tabs">
+                    <!-- main -->
+                    <div class="main">
+                        <div class="aboutme_1"><img src="images/aboutme/main/profile.png" alt="profile"></div>
+                        <div class="aboutme_2"><img src="images/aboutme/main/hamburger.png" alt="hamburger"></div>
+                        <div class="aboutme_3"><img src="images/aboutme/main/bicycle.png" alt="bicycle"></div>
+                        <div class="aboutme_4"><img src="images/aboutme/main/cat.png" alt="cat"></div>
+                    </div>
+                    <!-- //main -->
                     <!-- sub-->
                     <div class="sub">
                         <!-- thumbnails-->
@@ -90,53 +121,64 @@
                         <!-- //thumbnails-->
                         <!-- descriptions -->
                         <div class="descriptions">
-                            <div id="aboutme_1">
+                            <section id="aboutme_1">
                                 <h3>Akiyoshi Takazawa</h3>
                                 <div class="description">
+                                    <div class="topic">
                                     『リアル』×『IT』をテーマに、アナログなことををデジタルアプリで活用することで、世の中が便利になることに対して興味を抱き、Webプログラマーを目指す。
+                                    </div>
+                                    <div class="topic">
                                     新卒から約5年間は、貸会議室やイベントスペースを販売する企業に勤めており、 イベントの企画から運営までをプロデュースする部署にて企画営業として所属しておりました。
+                                    </div>
+                                    <div class="topic">
                                     今は、多くの時間をプログラミングに注ぐため退職し、日々スキルを磨き中。 イベントにおいて参加者と主催者がつながれるアプリケーションを作りたい。
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="aboutme_2">
+                            </section>
+                            <section id="aboutme_2">
                                 <h3>一番大好きな食べ物ハンバーガー</h3>
                                 <div class="description">
+                                    <div class="topic">
                                     食べ物の中で『ハンバーガー』が一番好きです。
                                     野菜も食べれて、肉も食べれて、パンも食べれるのに、こんなにうまいのか。。
+                                    </div>
+                                    <div class="topic">
                                     多くの店のハンバーガー巡りを徐々にしています。
-                                    一番好きなハンバーガーは、なんとマクドナルドの『エグチ』です。
+                                    一番好きなハンバーガーは、なんとマクドナルドの『エグチ』です。(貧乏舌？笑)
                                     専門店のハンバーガーはもちろんおいしいですが、『エグチ』はコスパ含めすべてがパーフェクトだと思っています。
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="aboutme_3">
+                            </section>
+                            <section id="aboutme_3">
                                 <h3>爽快感が半端ないロードバイク</h3>
                                 <div class="description">
+                                    <div class="topic">
                                     運動することがめちゃくちゃ好きで、ロードバイクに社会人から乗っております。川沿いを走っているときの爽快感がクセになります。
                                     人と競り合うことが好きなので、レースにも参加します。(結果はおいておき、、)
+                                    </div>
+                                    <div class="topic">
                                     最近は、ランニングも好きになり、どちらも日々精進しています。
-                                    将来的には、トライアスロンに挑戦していきたい。
+                                    将来的には、トライアスロンに挑戦していきたいと考えています。
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="aboutme_4">
+                            </section>
+                            <section id="aboutme_4">
                                 <h3>猫を愛する男(犬も好きです。)</h3>
                                 <div class="description">
+                                    <div class="topic">
                                     猫が好きです。写真は、元気な実家の三毛猫ちゃんです。
                                     写真当時は、子猫ですが、今では大きな猫になりました。
                                     猫のモフモフとした手が好きです。
+                                    </div>
+                                    <div class="topic">
+                                    犬は、柴犬や秋田犬が好きです。将来は、犬と猫を絶対飼うこと決めています。
+                                    </div>
                                 </div>
-                            </div>
+                            </section>
                         </div>
                         <!-- //descriptions -->
                     </div>
                     <!-- //sub-->
-                    <!-- main -->
-                    <div class="main">
-                        <div class="aboutme_1"><img src="images/aboutme/main/profile.png" alt="profile"></div>
-                        <div class="aboutme_2"><img src="images/aboutme/main/hamburger.png" alt="hamburger"></div>
-                        <div class="aboutme_3"><img src="images/aboutme/main/bicycle.png" alt="bicycle"></div>
-                        <div class="aboutme_4"><img src="images/aboutme/main/cat.png" alt="cat"></div>
-                    </div>
-                    <!-- //main -->
                 </div>
                 <!-- //content -->
             </section>
@@ -146,28 +188,30 @@
             <section id="works" class="works">
                 <h2>WORKS</h2>
                 <div class="content">
-                    <div class="works_1">
-                        <div class="work_image"><img src="images/works/portfolio.png" alt="portfolio"></div>
-                        <div class="description">Akiyoshi Takazawa ポートフォリオサイト</div>
-                        <div class="button"><button><a href="#">詳しく見る</a></button></div>
+                    <div class="works_content">
+                        <div class="work_image portfolio"><img src="images/works/portfolio.png" alt="portfolio"></div>
+                        <div class="description">Akiyoshi Takazawa<br>ポートフォリオサイト</div>
+                        <a href="./works_portfoliosite.html" target="_blank" rel="noopener">詳しく見る</a>
                     </div>
-                    <div class="works_2">
+                    <div class="works_content">
                         <div class="work_image"><img src="images/works/sample_kosu.png" alt="sample_kosu"></div>
                         <div class="description">Sample 工数管理ツール</div>
-                        <div class="button"><button><a href="#">詳しく見る</a></button></div>
+                        <a href="./works_sample_cost.html" target="_blank" rel="noopener">詳しく見る</a>
                     </div>
+                </div>
                 </div>
             </section>
             <!-- //WORKS-->
             
             <!-- SKILLS -->
             <section id="skills" class="skills">
+                <div class="background">
                 <h2>SKILLS</h2>
                 <div class="content">
-                    <div class="description">身に着けているスキルをまとめております。フロントエンドからバックエンドまで広く浅くですが、スキル向上に取り組んでいます。</div>
+                    <div class="description">身に着けているスキルをまとめております。<br>フロントエンドからバックエンドまで広く浅くですが、スキル向上に取り組んでいます。</div>
                     <div class="chart_graph">
-                        <canvas class="chart col-lg-6" id="RaderChart_FrontEnd"></canvas>
-                        <canvas class="chart col-lg-6" id="RaderChart_BackEnd_DevOps"></canvas>
+                        <div class="chart"><canvas id="RaderChart_FrontEnd"></canvas></div>
+                        <div class="chart"><canvas id="RaderChart_BackEnd_DevOps"></canvas></div>
                     </div>
                     <div class="table">
                         <h4>チャートの見方</h4>
@@ -177,24 +221,24 @@
                                 <th class="text-center">定義</th>
                             </tr>
                             <tr>
-                                <td class="text-center"> 1 </td>
-                                <td class="text-center">軽く使用した・学習した言語</td>
+                                <td class="text"> 1 </td>
+                                <td class="description">軽く使用した・学習した言語</td>
                             </tr>
                             <tr>
-                                <td class="text-center"> 2 </td>
-                                <td class="text-center">制作物にて使用した言語</td>
+                                <td class="text"> 2 </td>
+                                <td class="description">制作物にて使用した言語</td>
                             </tr>
                             <tr>
-                                <td class="text-center"> 3 </td>
-                                <td class="text-center">実務で数カ月以上使用しているが、習熟度が低い言語</td>
+                                <td class="text"> 3 </td>
+                                <td class="description">実務で数カ月以上使用しているが、習熟度が低い言語</td>
                             </tr>
                             <tr>
-                                <td class="text-center"> 4 </td>
-                                <td class="text-center">実務作業が問題なく実施出来るレベル</td>
+                                <td class="text"> 4 </td>
+                                <td class="description">実務作業が問題なく実施出来るレベル</td>
                             </tr>
                             <tr>
-                                <td class="text-center"> 5 </td>
-                                <td class="text-center">顧客の要望に対して、+αの価値を提供できる</td>
+                                <td class="text"> 5 </td>
+                                <td class="description">顧客の要望に対して、+αの価値を提供できる</td>
                             </tr>
                         </table>
                     </div>
@@ -204,45 +248,58 @@
             
             <!-- PROFILE -->
             <section id="profile" class="profile">
+                <div class="background">
                 <h2>PROFILE</h2>
                 <div class="myvision">
                     <div class="title">My Vision</div>
                     <div class="content">
-                        <div class="main">自らのチカラを使う機会を創出し、人が喜ぶ期待以上のサービスを提供する</div>
+                        <div class="main">自らのチカラを使う機会を創出し、<br>人が喜ぶ期待以上のサービスを提供する</div>
                         <div class="description">
-                            私は、自分自身のチカラを伸ばし、それを他者に対して貢献することでやりがいを感じます。多くの方に貢献するためには、常に自分を成長させなければなりません。自分の成長に対して、日々全力で取り組んでおります。
+                            私は、自分自身のチカラを伸ばし、それを他者に対して貢献することでやりがいを感じます。<br>多くの方に貢献するためには、常に自分を成長させなければなりません。自分の成長に対して、日々全力で取り組んでおります。
                         </div>
                     </div>
                 </div>
                 <div class="action_guide">
                     <div class="title">My Action Guidelines</div>
                     <div class="content">
-                        <div class="challenge">
+                        <div class="topic">
                             <div class="main">Challenge ～『挑戦』～</div>
-                            <div class="description">難しいことに挑戦をすることを大事にしています。自分が居心地の悪いところこそ、成長出来ると信じています。</div>
+                            <div class="description">難しいことに挑戦をすることを大事にしています。<br>自分が居心地の悪いところこそ、成長出来ると信じています。</div>
                         </div>
-                        <div class="positive">
+                        <div class="topic">
                             <div class="main">Positive ～『前向き』～</div>
-                            <div class="description">常に元気でいることを意識しています。また、積極性をもって行動するように心がけております。</div>
+                            <div class="description">常に元気でいることを意識しています。<br>また、積極性をもって行動するように心がけております。</div>
                         </div>
-                        <div class="believe">
+                        <div class="topic">
                             <div class="main">Believe ～『信じる』～</div>
-                            <div class="description">自分や周りの仲間のことを信じて、日々取り組んでいます。自分で決めたことを必ずやり遂げる！と自分自身のことも信じています。</div>
+                            <div class="description">自分や周りの仲間のことを信じて、日々取り組んでいます。<br>自分で決めたことを必ずやり遂げる！と自分自身のことも信じています。</div>
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
             <!-- //PROFILE -->
             <!-- MY INSTAGRAM -->
             <section id="instagram" class="instagram">
-                <h2>MY INSTAGRAM</h2>
+                <div class="background">
+                <h2><span>M</span>Y <span>I</span>NSTAGRAM</h2>
                 <div class="content">
                     <div class="description">私のinstagramです。主にストーリー投稿が多いです！お時間があれば見てください！</div>
                     <ul id="insta_gallery" class="insta_gallery"></ul>
-                    <a href="https://www.instagram.com/takazawa_akiyoshi/?hl=ja" class="insta_btn2">
+                </div>
+                <div class="contact">
+                    <a href="https://www.instagram.com/takazawa_akiyoshi/?hl=ja" target="_blank" rel="noopener" class="insta_btn2">
                         <i class="fab fa-instagram"></i> <span>Follow Me</span>
                     </a>
+                    <a href="akiyoshi.t3@gmail.com" target="_blank" rel="noopener" class="mail">
+                        <i class="fas fa-envelope"></i> <span>Mail</span>
+                    </a>
+                    
                 </div>
+                </div>
+                </div>
+                <!-- トップに戻るボタン -->
+                <a href="#" class="back-to-top"><img src="images/top_back.png" alt="back"></a>
             </section>
             <!-- //MY INSTAGRAM -->
         </div>
@@ -268,8 +325,7 @@
  
 　<script src="js/instagram.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/modal.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
   <script src="js/chart.js"></script>
 
   <!-- Font Awesome -->

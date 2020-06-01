@@ -2,7 +2,7 @@ $.getJSON("php/instagram.php", function(instagram_data){
 
   const gallery_data = instagram_data["business_discovery"]["media"]["data"];
   let photos = "";
-  const photo_length = 2;
+  const photo_length = 3;
 　
   //写真 //イイネ数
   for(let i = 0; i < photo_length ;i++){
